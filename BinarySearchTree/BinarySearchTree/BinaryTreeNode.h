@@ -19,7 +19,7 @@
 -(instancetype)newNodeWithObject:(NSObject *)object;
 -(void)addBinaryTreeNode:(BinaryTreeNode *)newNode;
 
--(instancetype)findBinaryTreeNodeOfObject:(BinaryTreeNode *)target;
+-(instancetype)findBinaryTreeNodeOfObject:(NSObject *)target;
 -(BOOL)isLeftChildOfParent;
 
 @end

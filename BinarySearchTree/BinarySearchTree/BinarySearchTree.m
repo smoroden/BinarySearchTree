@@ -27,15 +27,15 @@
         [self.root addBinaryTreeNode:newNode];
     }
 }
+
 -(BinaryTreeNode *)find:(NSObject *)object{
     
-    BinaryTreeNode *target = [[BinaryTreeNode alloc] newNodeWithObject:object];
     if (self.root == nil || self.root.object == nil ){
         return nil;
-    } else if ([self.root.object isGreaterThan:target.object]) {
-        return [self.root.leftChild findBinaryTreeNodeOfObject:target];
-    } else if ([self.root.object isLessThan:target.object]) {
-        return [self.root.rightChild findBinaryTreeNodeOfObject:target];
+    } else if ([self.root.object isGreaterThan:object]) {
+        return [self.root.leftChild findBinaryTreeNodeOfObject:object];
+    } else if ([self.root.object isLessThan:object]) {
+        return [self.root.rightChild findBinaryTreeNodeOfObject:object];
     }
     return nil;
 }

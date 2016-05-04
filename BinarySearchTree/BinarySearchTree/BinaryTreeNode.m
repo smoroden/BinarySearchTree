@@ -30,12 +30,12 @@
     }
 }
 
--(instancetype)findBinaryTreeNodeOfObject:(BinaryTreeNode *)target {
-    if ([self.object isEqualTo:target.object]) {
+-(instancetype)findBinaryTreeNodeOfObject:(NSObject *)target {
+    if ([self.object isEqualTo:target]) {
         return self;
-    } else if ([self.object isGreaterThan:target.object]) {
+    } else if ([self.object isGreaterThan:target]) {
         return [self.leftChild findBinaryTreeNodeOfObject:target];
-    } else if ([self.object isLessThan:target.object]) {
+    } else if ([self.object isLessThan:target]) {
         return [self.rightChild findBinaryTreeNodeOfObject:target];
     }
     
