@@ -16,7 +16,7 @@
 @property (nonatomic, strong) BinaryTreeNode *rightChild;
 @property (nonatomic, strong) BinaryTreeNode *parent;
 
--(instancetype)newNodeWithObject:(NSObject *)object;
+-(instancetype)newBinaryTreeNodeWithObject:(NSObject *)object;
 -(void)addBinaryTreeNode:(BinaryTreeNode *)newNode;
 
 -(instancetype)findBinaryTreeNodeOfObject:(NSObject *)target;

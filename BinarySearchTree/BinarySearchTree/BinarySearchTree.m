@@ -19,7 +19,7 @@
 }
 -(void)insertObject:(NSObject *)object{
     
-    BinaryTreeNode *newNode = [[BinaryTreeNode alloc] newNodeWithObject:object];
+    BinaryTreeNode *newNode = [[BinaryTreeNode alloc] newBinaryTreeNodeWithObject:object];
     
     if (!self.root) {
         self.root = newNode;

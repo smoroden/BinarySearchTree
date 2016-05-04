@@ -42,7 +42,7 @@
     return nil;
 }
 
--(instancetype)newNodeWithObject:(NSObject *)object {
+-(instancetype)newBinaryTreeNodeWithObject:(NSObject *)object {
     self.object = object;
     
     return self;
