@@ -17,8 +17,16 @@ int main(int argc, const char * argv[]) {
         [bst insertObject:@2];
         [bst insertObject:@6];
         
+        NSDate *methodStart = [NSDate date];
+
         BinaryTreeNode *found = [bst find:@2];
-        NSLog(@"%@",found.parent.object);
+        
+        NSDate *methodEnd = [NSDate date];
+        
+        NSTimeInterval executionTime = [methodEnd timeIntervalSinceDate:methodStart];
+        NSLog(@"Execution time for binary search: %f ", executionTime);
+        
+        NSLog(@"%@",found);
     }
     return 0;
 }
