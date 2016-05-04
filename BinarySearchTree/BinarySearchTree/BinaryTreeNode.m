@@ -12,7 +12,7 @@
 
 
 -(void)addBinaryTreeNode:(BinaryTreeNode *)newNode {
-    if (newNode.object >= self.object) {
+    if ([newNode.object isGreaterThanOrEqualTo:self.object]) {
         if (!self.rightChild) {
             newNode.parent = self;
             self.rightChild = newNode;
@@ -20,7 +20,7 @@
             [self.rightChild addBinaryTreeNode:newNode];
             return;
         }
-    } else if (newNode.object < self.object) {
+    } else if ([newNode.object isLessThan:self.object]) {
         if(!self.leftChild) {
             newNode.parent = self;
             self.leftChild = newNode;
